@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-Do List</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/fontawesome.css"
+        integrity="sha512-pHHwK5szJ4JWF3P7RHBpfMH/4a7pzoag+okKDhzRmqhMhIPrBUaSXgedPLkJCaWuXKVOfm1cyXHsDMSdhroKZQ=="
+        crossorigin="anonymous" />
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand">#TODO LIST</a>
+        <div class="d-flex">
+            <input class="form-control me-2" id="searchtextbox" type="search" placeholder="Search" aria-label="Search">
+        </div>
+    </nav>
+    <div class="todo__title">
+        <h1>TO-DO List</h1>
+    </div>
+
+    <div class="todo-container">
+        <form class=todo-container__form>
+            <br />
+            <input type="text" name="taskname" id="item" placeholder="Enter Task ..." class="form__taskname" />
+            <button type="submit" class="form__submitbtn" id="add" value="Add Data"><i class="fa fa-plus"></i><b> Add
+                    Task...</b></button>
+            <br />
+            <div class="todo-container__filter">
+                <select name="todos" id="filter-todo" class="">
+                    <option value="all">All</option>
+                    <option value="completed">Completed</option>
+                    <option value="uncompleted">Uncompleted</option>
+                </select>
+                <button type="button" class="dlt btn btn-danger" id="dltbtn">Delete All</button>
+            </div>
+            <div class="tdlt">
+                <select name="todos" id="drop-check">
+                    <option value="" default>Choose One</option>
+                    <option value="dlts">Delete</option>
+                    <option value="cmts">Completed</option>
+                    <option value="ucmts">Uncompleted</option>
+                </select>
+            </div>
+        </form>
+        <!--<table id="table1" class="tbl"></table>-->
+    </div>
+    <div>
+        <input type="checkbox" class="form__selectbox" id="ckck"><b>Select All</b></input>
+        <div class="todolist-container">
+            <ul class="todo-list" id="List"></ul>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="static/js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+</body>
+</html>
